@@ -71,13 +71,22 @@ class DoublyLinkedList:
         self.length -= 1
         return temp
 
-    ### WRITE GET METHOD HERE ###
-    #                           #
-    #                           #
-    #                           #
-    #                           #
-    #############################
-
+    def get(self, index):
+        if index < 0 or index >= self.length:
+            return None
+        if index < self.length//2:
+            temp = self.head
+            counter = 0
+            while counter != index:
+                temp = temp.next
+                counter += 1
+        else:
+            temp = self.tail
+            counter = self.length - 1
+            while counter != index:
+                temp = temp.prev
+                counter -= 1
+        return temp
 
 
 

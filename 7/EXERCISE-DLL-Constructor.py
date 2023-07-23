@@ -1,19 +1,14 @@
-# class Node:
-    ## WRITE NODE CONSTRUCTOR HERE ##
-    #                               #
-    #                               #
-    #                               #
-    #                               #
-    #################################
+class Node:
+    def __init__(self, value):
+        self.value = value
+        self.next = None
+        self.prev = None
         
-# class DoublyLinkedList:
-    ## WRITE DLL CONSTRUCTOR HERE ##
-    #                              #
-    #                              #
-    #                              #
-    #                              #
-    ################################
-  
+class DoublyLinkedList:
+    def __init__(self, value):
+        self.head = Node(value)
+        self.tail = self.head
+        self.length = 1
 
 
 

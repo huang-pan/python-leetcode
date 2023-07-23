@@ -18,13 +18,18 @@ class DoublyLinkedList:
             print(temp.value)
             temp = temp.next
         
-    ## WRITE APPEND METHOD HERE ##
-    #                            #
-    #                            #
-    #                            #
-    #                            #
-    ##############################
-  
+    def append(self, value):
+        new_node = Node(value)
+        if self.length == 0:
+            self.head = new_node
+            self.tail = new_node
+            self.length = 1
+        else:
+            new_node.prev = self.tail
+            self.tail.next = new_node
+            self.tail = new_node 
+            self.length += 1
+        return True
 
   
 
