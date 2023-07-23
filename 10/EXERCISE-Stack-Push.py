@@ -16,13 +16,11 @@ class Stack:
             print(temp.value)
             temp = temp.next
 
-    ### WRITE PUSH METHOD HERE ###
-    #                            #
-    #                            #
-    #                            #
-    #                            #
-    ##############################
- 
+    def push(self, value):
+        new_node = Node(value)
+        new_node.next = self.top
+        self.top = new_node
+        self.height += 1 
 
 
 
