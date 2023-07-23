@@ -81,13 +81,20 @@ class LinkedList:
             return True
         return False
     
-    ## WRITE INSERT METHOD HERE ##
-    #                            #
-    #                            #
-    #                            #
-    #                            #
-    ##############################
-  
+    def insert(self, index, value):
+        if index < 0 or index > self.length:
+            return False
+        if index == 0:
+            return self.prepend(value)
+        if index == self.length:
+            return self.append(value)
+        new_node = Node(value)
+        pre = self.get(index - 1)
+        temp = pre.next
+        pre.next = new_node
+        new_node.next = temp
+        self.length += 1
+        return True  
 
 
 

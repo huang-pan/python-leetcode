@@ -109,13 +109,21 @@ class LinkedList:
         self.length -= 1
         return temp
 
-    ## WRITE REVERSE METHOD HERE ##
-    #                             #
-    #                             #
-    #                             #
-    #                             #
-    ###############################
-  
+    def reverse(self):
+        if self.length == 0:
+            return None
+        if self.length == 1:
+            return self.head
+        first = self.head
+        self.tail = self.head
+        second = first.next
+        while(second):
+            temp = second.next
+            second.next = first
+            first = second
+            second = temp
+        self.head.next = None
+        self.head = first
 
 
 
