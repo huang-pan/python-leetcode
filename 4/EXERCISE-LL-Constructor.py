@@ -20,6 +20,8 @@ print('Tail:', my_linked_list.tail.value)
 print('Length:', my_linked_list.length)
 print('Head:', id(my_linked_list.head))
 
+for i in range(1):
+    print(i)
 
 """
     EXPECTED OUTPUT:
