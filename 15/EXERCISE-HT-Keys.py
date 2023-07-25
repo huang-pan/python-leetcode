@@ -26,14 +26,13 @@ class HashTable:
                     return self.data_map[index][i][1]
         return None
 
-    ## WRITE KEYS METHOD HERE ##
-    #                          #
-    #                          #
-    #                          #
-    #                          #
-    ############################
-        
-
+    def keys(self):        
+        keys_array = []
+        for i in range(len(self.data_map)):
+            if self.data_map[i] is not None:
+                for j in range(len(self.data_map[i])):
+                    keys_array.append(self.data_map[i][j][0])
+        return keys_array
         
 
 my_hash_table = HashTable()

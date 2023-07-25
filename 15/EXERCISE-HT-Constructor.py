@@ -1,9 +1,7 @@
 class HashTable:
-    ## WRITE HT CONSTRUCTOR HERE ##
-    #                             #
-    #                             #
-    ###############################
-      
+    def __init__(self):
+        self.data_map = [None] * 7
+
     def __hash(self, key):
         my_hash = 0
         for letter in key:
