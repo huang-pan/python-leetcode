@@ -29,13 +29,22 @@ class BinarySearchTree:
                     return True
                 temp = temp.right
 
-    ## WRITE CONTAINS METHOD HERE ##
-    #                              #
-    #                              #
-    #                              #
-    #                              #
-    ################################
-        
+    def contains(self, value):
+        if self.root is None:
+            return False
+        temp = self.root
+        while (True):
+            if value == temp.value:
+                return True
+            if value < temp.value:
+                if temp.left is None:
+                    return False
+                temp = temp.left
+            else: 
+                if temp.right is None:
+                    return False
+                temp = temp.right
+        return False        
 
 
 
