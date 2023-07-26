@@ -6,13 +6,9 @@ class Graph:
         for vertex in self.adj_list:
             print(vertex, ':', self.adj_list[vertex])
 
-    ## WRITE ADD_VERTEX METHOD HERE ##
-    #                                #
-    #                                #
-    #                                #
-    #                                #
-    ##################################
-
+    def add_vertex(self, vertex):
+        if vertex not in self.adj_list:
+            self.adj_list[vertex] = []
 
 
 

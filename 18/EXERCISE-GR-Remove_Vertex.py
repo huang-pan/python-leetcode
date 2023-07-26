@@ -29,13 +29,13 @@ class Graph:
             return True
         return False
 
-    ## WRITE REMOVE_VERTEX METHOD HERE ##
-    #                                   #
-    #                                   #
-    #                                   #
-    #                                   #
-    ##################################### 
-
+    def remove_vertex(self, vertex):
+        if vertex in self.adj_list.keys():
+            for v in self.adj_list[vertex]:
+                self.remove_edge(vertex, v)
+            del self.adj_list[vertex]
+            return True
+        return False
 
 
 

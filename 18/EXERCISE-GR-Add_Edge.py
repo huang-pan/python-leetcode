@@ -12,13 +12,12 @@ class Graph:
             return True
         return False
 
-    ## WRITE ADD_EDGE METHOD HERE ##
-    #                              #
-    #                              #
-    #                              #
-    #                              #
-    ################################
-
+    def add_edge(self, vertex1, vertex2):
+        if vertex1 in self.adj_list.keys() and vertex2 in self.adj_list.keys():
+            self.adj_list[vertex1].append(vertex2)
+            self.adj_list[vertex2].append(vertex1)
+            return True
+        return False
 
 
 
