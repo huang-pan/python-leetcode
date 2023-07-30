@@ -41,13 +41,10 @@ class BinarySearchTree:
         return False
     
     
-    ## WRITE MIN_VALUE METHOD HERE ##
-    #                               #
-    #                               #
-    #                               #
-    #                               #
-    #################################
-        
+    def min_value(self, current_node):
+        if current_node.left is None:
+            return current_node.value
+        return self.min_value(current_node.left)        
         
 
 my_tree = BinarySearchTree()

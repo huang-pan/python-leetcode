@@ -78,14 +78,25 @@ class BinarySearchTree:
             current_node = current_node.left
         return current_node.value 
 
-    ## WRITE DELETE_NODE METHODS HERE ##
-    #                                  #
-    #                                  #
-    #                                  #
-    #                                  #
-    ####################################
+    def __r_delete_node(self, current_node, value):
+        if current_node is None:
+            return None
+        if value < current_node.value:
+            current_node.left = self.__r_delete_node(current_node.left, value)
+        elif value > current_node.value:
+            current_node.right = self.__r_delete_node(current_node.right, value)
+        else:
+            if current_node.left is None:
+                return current_node.right
+            elif current_node.right is None:
+                return current_node.left
+            else:
+                current_node.value = self.min_value(current_node.right)
+                current_node.right = self.__r_delete_node(current_node.right, current_node.value)
+        return current_node
 
-
+    def delete_node(self, value):
+        self.__r_delete_node(self.root, value)
 
 
 my_tree = BinarySearchTree()
