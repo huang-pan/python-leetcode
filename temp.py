@@ -20,3 +20,7 @@ print(''.join(ss))
 mydict = {}
 mydict[5] = 1
 print(mydict)
+
+test = 'abc'
+print(test[:1]) # a, index 0
+print(test[1:]) # bc, index 1 to end
