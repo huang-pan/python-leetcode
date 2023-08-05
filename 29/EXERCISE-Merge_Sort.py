@@ -21,13 +21,14 @@ def merge(array1, array2):
     return combined
 
 
-## WRITE MERGE_SORT FUNCTION HERE ##
-#                                  #
-#                                  #
-#                                  #
-#                                  #
-####################################
-
+def merge_sort(nums):
+    if len(nums) == 1:
+        return nums
+    else:
+        mid = len(nums) // 2
+        left = nums[:mid]
+        right = nums[mid:]
+        return merge(merge_sort(left), merge_sort(right))
 
 
 original_list = [3,1,4,2]
