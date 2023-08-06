@@ -57,13 +57,16 @@ class BinarySearchTree:
                 queue.append(current_node.right)
         return results
     
-    ### WRITE DFS_PRE_ORDER METHOD HERE ###
-    #                                     #
-    #                                     #
-    #                                     #
-    #                                     #
-    #######################################
-
+    def dfs_pre_order(self):
+        results = []
+        def traverse(node):
+            results.append(node.value)
+            if node.left:
+                traverse(node.left)
+            if node.right:
+                traverse(node.right)
+        traverse(self.root)
+        return results
 
 
 

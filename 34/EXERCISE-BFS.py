@@ -42,16 +42,19 @@ class BinarySearchTree:
                 return True
         return False
   
-    ### WRITE BFS METHOD HERE ###
-    #                           #
-    #                           #
-    #                           #
-    #                           #
-    #############################
-
-
-
-
+    def BFS(self):
+        data = []
+        queue = []
+        node = self.root
+        queue.append(node)
+        while len(queue) > 0:
+            node = queue.pop(0)
+            data.append(node.value)
+            if node.left:
+                queue.append(node.left)
+            if node.right:
+                queue.append(node.right)
+        return data
 
 my_tree = BinarySearchTree()
 my_tree.insert(47)
